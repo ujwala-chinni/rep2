@@ -25,4 +25,21 @@ public String findGrades(Student studentObject)
 	}
 	return studentObject.getGrade();
 }
+	public String validate(Student s) throws NullNameException,NullMarksArrayException,NullStudentObjectException
+{
+	if(s==null)
+	{
+		return throw new NullStudentObjectException();
+	}
+	else
+	{
+		if(s.name==null)
+			return throw new NullNameException("hello");
+		else if(s.marks==null)
+			return throw new NullMarksEXception("");
+		else
+			return "valid";
+		
+	}
+}
 }
